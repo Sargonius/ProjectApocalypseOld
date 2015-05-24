@@ -1,0 +1,7 @@
+Project Apocalypse: ToDo List
+
+
+- Make EventManager class
+	- clean GameStateManager
+	
+
