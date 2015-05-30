@@ -12,4 +12,14 @@ public class EventSystem : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    void checkForEvent() //
+    {
+
+    }
+
+    void generateEvent()
+    {
+
+    }
 }
