@@ -4,4 +4,18 @@ Project Apocalypse: ToDo List
 - Make EventManager class
 	- clean GameStateManager
 	
+- Make Camp Upgrade table
+- Camp bonuses per level
 
+- Camp parameters
+	- Food
+	- Wood
+	- Security
+
+- Free survivors
+	- There is a chance for new survivor every day.
+	- If camp security is low, survivors can die
+
+- Jobs
+
+- Unknown resources until camp is upgraded
