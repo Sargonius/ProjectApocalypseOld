@@ -19,3 +19,7 @@ Project Apocalypse: ToDo List
 - Jobs
 
 - Unknown resources until camp is upgraded
+
+- Detach global game elements to static, code-driven objects?
+
+- Move camp resources to CampInit() function of Camp()

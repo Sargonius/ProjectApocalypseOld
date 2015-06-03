@@ -9,6 +9,7 @@ public class UIController : MonoBehaviour {
 
 	public Text foodLabel;
 	public Text woodLabel;
+    public Text survivorsLabel;
 
 	public Camp campReference;
 	public Text campUpgradeCost;
@@ -26,7 +27,8 @@ public class UIController : MonoBehaviour {
 	void Update () {
 		foodLabel.text = "Food: " + GameStateManager.campFood;
 		woodLabel.text = "Wood: " + GameStateManager.campWood;
-		campUpgradeCost.text = "Cost: " + campReference.upgradeCost + " wood";
+        survivorsLabel.text = "Survivors: " + GameStateManager.campSurvivors;
+        campUpgradeCost.text = "Cost: " + campReference.upgradeCost + " wood";
 		campCurrentLevel.text = "Camp level: " + campReference.campLevel;
 
 

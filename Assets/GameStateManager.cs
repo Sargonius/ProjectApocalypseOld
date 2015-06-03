@@ -16,8 +16,9 @@ public class GameStateManager : MonoBehaviour {
 	public static int campFood = 5;
 	public static int campWood = 5;
 	public static int campSupply = 5;
+    public static int campSurvivors = 5;
 
-	public Text dayCounter;
+    public Text dayCounter;
 	public Text hoursCounter;
 
 
@@ -124,6 +125,7 @@ public class GameStateManager : MonoBehaviour {
 				GameStateManager.days++;
 				hours = 0;
 			}
+            //EventManager.checkForEvent();
 			//Debug.Log ("Hours passed: " + GameStateManager.hours);
 			float randomEventCheck = Random.Range(0f,1f);
 			//Debug.Log ("RandomEventCheck = " + randomEventCheck);
@@ -143,9 +145,10 @@ public class GameStateManager : MonoBehaviour {
 		eventType = Random.Range (0, 5);
 
 		switch (eventType) {
-		case 0:
+		case 0: //Survivor joins the camp
 			{
-				//Debug.Log ("Event 0. Nothing.");
+                    //Debug.Log ("Event 0. Nothing.");
+                    campSurvivors++;
 				break;
 			}
 		case 1:
@@ -154,9 +157,31 @@ public class GameStateManager : MonoBehaviour {
 				forest.generateResource();
 				break;
 			}
-		case 2:
+		case 2: //Raid
 		{
-			forest.generateResource();
+                    //forest.generateResource();
+                    float raidCheck = Random.Range(0, 1f);
+                    if (raidCheck <= 0.5f)
+                    {
+                        Debug.Log("You sucessfully defended your camp from raiders!");
+                    }
+                    else if (raidCheck <=0.7f)
+                    {
+                        Debug.Log("You were raided. Lost some supplies.");
+                        campSupply -= Random.Range(1, campSupply);
+                    }
+                    else if (raidCheck <=0.9f)
+                    {
+                        Debug.Log("You were raided. Lost some food.");
+                        campSupply -= Random.Range(1, campFood);
+                    }
+                    else
+                    {
+                        Debug.Log("You were heavily raided. Lost food, supplies and survivors.");
+                        campSupply -= Random.Range(1, campSupply);
+                        campFood -= Random.Range(1, campFood);
+                        campSurvivors -= Random.Range(1, campSurvivors);
+                    }
 			break;
 		}
 		case 3:

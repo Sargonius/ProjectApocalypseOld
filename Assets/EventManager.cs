@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EventSystem : MonoBehaviour {
+public class EventManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -13,13 +13,13 @@ public class EventSystem : MonoBehaviour {
 	
 	}
 
-    void checkForEvent() //
+    public static void checkForEvent() //
     {
-
+        Debug.Log("Called");
     }
 
     void generateEvent()
     {
-
+        
     }
 }

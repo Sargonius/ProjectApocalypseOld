@@ -19,6 +19,8 @@ public class Camp : MonoBehaviour
 
     public float campUpgradeTime = 1;
 
+    
+
     // Use this for initialization
     void Start()
     {
